@@ -15,19 +15,19 @@ const Navbar = () => {
                 <div className='flex item-center justify-between py-4 font-medium'>
                     <NavLink style={{fontSize:'20px'}} className="navbar-brand" to="/">Luxury.io</NavLink>
                     <ul className="hidden sm:flex gap-5 text-sm text-white">
-                        <NavLink className='flex flex-col items-center gap-1' to="/">
+                        <NavLink className='flex flex-col navlink items-center gap-1' to="/">
                             <li>Home</li>
                             <hr className='w-2/4 border-none h-[1.5px] bg-gray-200 hidden' />
                         </NavLink>
-                        <NavLink className='flex flex-col items-center gap-1' to="/collection">
+                        <NavLink className='flex flex-col navlink items-center gap-1' to="/collection">
                             <li>Collections</li>
                             <hr className='w-2/4 border-none h-[1.5px] bg-gray-200 hidden' />
                         </NavLink>
-                        <NavLink className='flex flex-col items-center gap-1' to="/about">
+                        <NavLink className='flex flex-col navlink items-center gap-1' to="/about">
                             <li>About</li>
                             <hr className='w-2/4 border-none h-[1.5px] bg-gray-200 hidden' />
                         </NavLink>
-                        <NavLink className='flex flex-col items-center gap-1' to="/contact">
+                        <NavLink className='flex flex-col navlink items-center gap-1' to="/contact">
                             <li>Contact</li>
                             <hr className='w-2/4 border-none h-[1.5px] bg-gray-200 hidden' />
                         </NavLink>
