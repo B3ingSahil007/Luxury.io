@@ -18,10 +18,9 @@ const BestSellers = () => {
                 <div className="text-center text-3xl py-8">
                     <Title text1={'BEST'} text2={'SELLERS'} />
                     <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora iure iste sequi, deleniti maxime inventore, possimus, impedit rerum at ut qui cum laborum velit quae.
+                    Our best sellers bring together timeless style and modern flair, loved for their versatility and quality. Each piece is crafted to elevate any look, featuring classic designs, comfortable fits, and premium materials. Explore our most popular items and find your next wardrobe favorite!
                     </p>
                 </div>
-
                 {/* Rendering Products */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
                     {bestSellers.map((item, index) => (

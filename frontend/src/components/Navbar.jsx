@@ -11,9 +11,9 @@ const Navbar = () => {
     const [visible, setVisible] = useState(false);
     return (
         <>
-            <div className="container">
+            <div className="container sticky-top bg-[#242424]">
                 <div className='flex item-center justify-between py-4 font-medium'>
-                    <NavLink style={{fontSize:'20px'}} className="navbar-brand" to="/">Luxury.io</NavLink>
+                    <NavLink style={{fontSize:'20px'}} className="navbar-brand prata-regular" to="/">Luxury.io</NavLink>
                     <ul className="hidden sm:flex gap-5 text-sm text-white">
                         <NavLink className='flex flex-col navlink items-center gap-1' to="/">
                             <li>Home</li>

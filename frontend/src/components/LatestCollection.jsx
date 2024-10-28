@@ -9,7 +9,7 @@ const LatestCollection = () => {
     const [latestProducts, setLatestProducts] = useState([]);
     useEffect(() => {
         setLatestProducts(products.slice(0, 10));
-        console.log("Products", products);
+        // console.log("Products", products);
     }, []);
 
     return (
@@ -18,10 +18,9 @@ const LatestCollection = () => {
                 <div className="text-center py-8 sm:text-3xl">
                     <Title text1={'LATEST'} text2={'COLLECTIONS'} />
                     <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora iure iste sequi, deleniti maxime inventore, possimus, impedit rerum at ut qui cum laborum velit quae.
+                    Discover our latest collection: a blend of elegant essentials and bold statement pieces, perfect for any occasion. With sustainable materials and comfortable, relaxed fits, these styles are both eco-friendly and effortlessly chic. Finish your look with our curated accessories for a polished, elevated touch.
                     </p>
                 </div>
-
                 {/* Rendering Products */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
                     {latestProducts.map((item, index) => (
