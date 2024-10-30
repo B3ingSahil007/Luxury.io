@@ -5,7 +5,7 @@ import Title from '../components/Title';
 import { IoIosArrowDropright } from "react-icons/io";
 
 const Collection = () => {
-    const { products } = useContext(ShopContext);
+    const { products, search, showSearch } = useContext(ShopContext);
     const [showFilter, setShowFilter] = useState(false);
     const [collectionsProducts, setCollectionsProducts] = useState([]);
     const [category, setCategory] = useState([]);
@@ -24,6 +24,10 @@ const Collection = () => {
 
     const applyFilter = () => {
         let productsCopy = products.slice();
+
+        if (showSearch && search) {
+            productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
+        }
 
         if (category.length > 0) {
             productsCopy = productsCopy.filter(item => category.includes(item.category));
@@ -45,7 +49,7 @@ const Collection = () => {
     useEffect(() => {
         setCollectionsProducts(products);
         applyFilter();
-    }, [products, category, subCategory, sortOption]);
+    }, [products, category, subCategory, sortOption, search, showSearch]);
 
     // Erase Below Navbar Line
 
@@ -63,18 +67,24 @@ const Collection = () => {
                     <div style={{ borderRadius: '10px' }} className={`border border-gray-500 pl-5 py-3 mt-3 mb-2 ${showFilter ? '' : 'hidden'} sm:block`}>
                         <p className='mb-2 text-sm font-medium'>CATEGORIES</p>
                         <div className='flex flex-col gap-2 text-sm font-light text-gray-500'>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory} />MENS</p>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Women'} onChange={toggleCategory} />WOMENS</p>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />KIDS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory} />MENS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Women'} onChange={toggleCategory} />WOMENS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />KIDS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Electronics'} onChange={toggleCategory} />ELECTRONICS</p>
                         </div>
                     </div>
                     {/* Filters Sub Category */}
                     <div style={{ borderRadius: '10px' }} className={`border border-gray-500 pl-5 py-3 my-3 mb-3 ${showFilter ? '' : 'hidden'} sm:block`}>
                         <p className='mb-2 text-sm font-medium'>TYPE</p>
                         <div className='flex flex-col gap-2 text-sm font-light text-gray-500'>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Topwear'} onChange={toggleSubCategory} />TOP WEAR</p>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Bottomwear'} onChange={toggleSubCategory} />BOTTOM WEAR</p>
-                            <p className='flex gap-2'><input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />WINTER WEAR</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Topwear'} onChange={toggleSubCategory} />TOP WEAR</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Bottomwear'} onChange={toggleSubCategory} />BOTTOM WEAR</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />WINTER WEAR</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Footwear'} onChange={toggleSubCategory} />FOOT WEAR</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Laptops'} onChange={toggleSubCategory} />LAPTOPS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Cameras'} onChange={toggleSubCategory} />CAMERAS</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Smartphones'} onChange={toggleSubCategory} />SMARTPHONES</p>
+                            <p className='flex gap-2 hover:text-white'><input className='w-3' type="checkbox" value={'Formalwear'} onChange={toggleSubCategory} />FORMAL WEAR</p>
                         </div>
                     </div>
                 </div>

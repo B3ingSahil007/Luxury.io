@@ -53,7 +53,78 @@ import p_img49 from './p_img49.png'
 import p_img50 from './p_img50.png'
 import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
-
+import p_img53_1 from './p_img53_1.jpg'
+import p_img53_2 from './p_img53_2.jpg'
+import p_img53_3 from './p_img53_3.jpg'
+import p_img53_4 from './p_img53_4.jpg'
+import p_img53_5 from './p_img53_4.jpg'
+import p_img54_1 from './p_img54_1.jpg'
+import p_img54_2 from './p_img54_2.jpg'
+import p_img54_3 from './p_img54_3.jpg'
+import p_img54_4 from './p_img54_4.jpg'
+import p_img54_5 from './p_img54_5.jpg'
+import p_img55_1 from './p_img55_1.jfif'
+import p_img55_2 from './p_img55_2.jfif'
+import p_img55_3 from './p_img55_3.jfif'
+import p_img55_4 from './p_img55_4.jfif'
+import p_img55_5 from './p_img55_5.jfif'
+import p_img56_1 from './p_img56_1.jpeg'
+import p_img56_2 from './p_img56_2.jpeg'
+import p_img56_3 from './p_img56_3.jpeg'
+import p_img56_4 from './p_img56_4.jpeg'
+import p_img56_5 from './p_img56_5.jpeg'
+import p_img56_6 from './p_img56_6.jpeg'
+import p_img57_1 from './p_img57_1.jpg'
+import p_img57_2 from './p_img57_2.jpg'
+import p_img57_3 from './p_img57_3.jpg'
+import p_img57_4 from './p_img57_4.jpg'
+import p_img57_5 from './p_img57_5.jpg'
+import p_img57_6 from './p_img57_6.jpg'
+import p_img57_7 from './p_img57_7.jpg'
+import p_img57_8 from './p_img57_8.jpg'
+import p_img57_9 from './p_img57_9.jpg'
+import p_img57_10 from './p_img57_10.jpg'
+import p_img57_11 from './p_img57_11.jpg'
+import p_img58_1 from './p_img58_1.jpg'
+import p_img58_2 from './p_img58_2.jpg'
+import p_img58_3 from './p_img58_3.jpg'
+import p_img58_4 from './p_img58_4.jpg'
+import p_img59_1 from './p_img59_1.jfif'
+import p_img59_2 from './p_img59_2.jfif'
+import p_img59_3 from './p_img59_3.jfif'
+import p_img59_4 from './p_img59_4.jfif'
+import p_img59_5 from './p_img59_5.jfif'
+import p_img60 from './p_img60.png'
+import p_img61 from './p_img61.png'
+import p_img62 from './p_img62.png'
+import p_img63_1 from './p_img63_1.png'
+import p_img63_2 from './p_img63_2.png'
+import p_img63_3 from './p_img63_3.png'
+import p_img63_4 from './p_img63_4.png'
+import p_img63_5 from './p_img63_5.png'
+import p_img64_1 from './p_img64_1.png'
+import p_img65 from './p_img65.png'
+import p_img65_1 from './p_img65_1.jpg'
+import p_img66 from './p_img66.png'
+import p_img67 from './p_img67.png'
+import p_img68 from './p_img68.png'
+import p_img69 from './p_img69.png'
+import p_img70 from './p_img70.png'
+import p_img71 from './p_img71.png'
+import p_img72 from './p_img72.png'
+import p_img73 from './p_img73.png'
+import p_img74 from './p_img74.png'
+import p_img75 from './p_img75.png'
+import p_img76 from './p_img76.png'
+import p_img77 from './p_img77.png'
+import p_img78 from './p_img78.png'
+import p_img79 from './p_img79.png'
+import p_img80 from './p_img80.png'
+import p_img81 from './p_img81.png'
+import p_img82 from './p_img82.png'
+import p_img83 from './p_img83.png'
+import p_img84 from './p_img84.png'
+import p_img85 from './p_img85.png'
 
 import logo from './logo.png'
 import hero_img from './hero_img.png'
@@ -720,6 +791,435 @@ export const products = [
         sizes: ["S", "M", "L", "XL"],
         date: 1716668445448,
         bestseller: true
-    }
-
+    },
+    {
+        _id: "aaaca",
+        name: "Men Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 760,
+        image: [p_img53_1, p_img53_2, p_img53_3, p_img53_4, p_img53_5],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacb",
+        name: "Women Full Cotton Dress",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 1560,
+        image: [p_img54_1, p_img54_2, p_img54_3, p_img54_4, p_img54_5],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacc",
+        name: "Men's Casual Puma Shoes",
+        description: "Classic and comfortable leather shoes perfect for casual wear. Crafted with high-quality leather, featuring a durable sole for long-lasting wear.",
+        price: 1690,
+        image: [p_img55_1, p_img55_2, p_img55_3, p_img55_4, p_img55_5],
+        category: "Men",
+        subCategory: "Footwear",
+        sizes: ["7", "8", "9", "10", "11"],
+        date: 1716621345448,
+        bestseller: false
+    },
+    {
+        _id: "aaacd",
+        name: "Mi Notebook 14",
+        description: "A sleek and lightweight laptop from Mi with a 14-inch FHD display, Intel Core i5 processor, 8GB RAM, and 512GB SSD, perfect for work and entertainment.",
+        price: 45999,
+        image: [p_img56_5, p_img56_6, p_img56_1, p_img56_2, p_img56_3, p_img56_4],
+        category: "Electronics",
+        subCategory: "Laptops",
+        specifications: {
+            processor: "Intel Core i5",
+            ram: "8GB",
+            storage: "512GB SSD",
+            display: "14-inch FHD",
+            battery: "10 hours",
+            weight: "1.5 kg"
+        },
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaace",
+        name: "Canon EOS 1500D DSLR Camera",
+        description: "A versatile DSLR camera with a 24.1 MP APS-C CMOS sensor, DIGIC 4+ image processor, and 3-inch LCD. Ideal for capturing high-quality images and Full HD videos.",
+        price: 45999,
+        image: [p_img57_1, p_img57_2, p_img57_3, p_img57_4, p_img57_5, p_img57_6, p_img57_7, p_img57_8, p_img57_9, p_img57_10, p_img57_11],
+        category: "Electronics",
+        subCategory: "Cameras",
+        specifications: {
+            sensor: "24.1 MP APS-C CMOS",
+            processor: "DIGIC 4+",
+            isoRange: "100-6400 (expandable to 12800)",
+            display: "3-inch LCD",
+            connectivity: ["Wi-Fi", "NFC"],
+            videoResolution: "Full HD 1080p"
+        },
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacf",
+        name: "Apple MacBook Air M2",
+        description: "Powerful and lightweight MacBook Air with the Apple M2 chip, 13.6-inch Retina display, 8GB unified memory, and 256GB SSD, perfect for high-performance work and seamless multitasking.",
+        price: 119999,
+        image: [p_img58_1, p_img58_2, p_img58_3, p_img58_4],
+        category: "Electronics",
+        subCategory: "Laptops",
+        specifications: {
+            processor: "Apple M2",
+            ram: "8GB Unified Memory",
+            storage: "256GB SSD",
+            display: "13.6-inch Retina",
+            battery: "Up to 18 hours",
+            weight: "1.24 kg",
+            connectivity: ["Wi-Fi 6", "Bluetooth 5.0"]
+        },
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacg",
+        name: "OnePlus 11 5G",
+        description: "Flagship OnePlus smartphone featuring a 6.7-inch Fluid AMOLED display, Snapdragon 8 Gen 2 processor, 16GB RAM, 256GB storage, and a triple camera setup with 50MP main lens.",
+        price: 61999,
+        image: [p_img59_1, p_img59_2, p_img59_3, p_img59_4, p_img59_5],
+        category: "Electronics",
+        subCategory: "Smartphones",
+        specifications: {
+            display: "6.7-inch Fluid AMOLED, 120Hz",
+            processor: "Snapdragon 8 Gen 2",
+            ram: "16GB",
+            storage: "256GB",
+            battery: "5000mAh with 100W fast charging",
+            camera: {
+                main: "50MP",
+                ultraWide: "48MP",
+                telephoto: "32MP"
+            },
+            connectivity: ["5G", "Wi-Fi 6E", "Bluetooth 5.3"]
+        },
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaach",
+        name: "Women Zip-Front Relaxed Fit Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 1170,
+        image: [p_img60],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716650845448,
+        bestseller: false
+    },
+    {
+        _id: "aaaci",
+        name: "Women Zip-Front Relaxed Fit Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 930,
+        image: [p_img61],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716650845448,
+        bestseller: false
+    },
+    {
+        _id: "aaacj",
+        name: "Women Zip-Front Relaxed Fit Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 730,
+        image: [p_img62],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716650845448,
+        bestseller: false
+    },
+    {
+        _id: "aaack",
+        name: "Women Round Neck Cotton Top",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 540,
+        image: [p_img63_1, p_img63_2, p_img63_3, p_img63_4, p_img63_5],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716625545448,
+        bestseller: true
+    },
+    {
+        _id: "aaacl",
+        name: "Women Round Neck Cotton Top",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 530,
+        image: [p_img64_1],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["M", "L", "XL"],
+        date: 1716622345448,
+        bestseller: false
+    },
+    {
+        _id: "aaacm",
+        name: "Women's Cozy Fleece Hoodie",
+        description: "Soft and comfortable fleece hoodie designed to keep you warm in style. Features a relaxed fit, adjustable drawstring hood, and a front kangaroo pocket.",
+        price: 1299,
+        image: [p_img65, p_img65_1],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: false
+    },
+    {
+        _id: "aaacn",
+        name: "Women's Cozy Fleece Hoodie",
+        description: "Soft and comfortable fleece hoodie designed to keep you warm in style. Features a relaxed fit, adjustable drawstring hood, and a front kangaroo pocket.",
+        price: 1199,
+        image: [p_img66],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: false
+    },
+    {
+        _id: "aaaco",
+        name: "Men's Classic Suit",
+        description: "Elegant two-piece suit crafted with high-quality fabric, perfect for formal events and business meetings. Includes a tailored blazer and matching trousers.",
+        price: 7999,
+        image: [p_img67],
+        category: "Men",
+        subCategory: "Formalwear",
+        sizes: ["38", "40", "42", "44", "46"],
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacp",
+        name: "Men's Classic Suit",
+        description: "Elegant two-piece suit crafted with high-quality fabric, perfect for formal events and business meetings. Includes a tailored blazer and matching trousers.",
+        price: 5999,
+        image: [p_img68],
+        category: "Men",
+        subCategory: "Formalwear",
+        sizes: ["38", "40", "42", "44", "46"],
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacq",
+        name: "Men's Classic Suit",
+        description: "Elegant two-piece suit crafted with high-quality fabric, perfect for formal events and business meetings. Includes a tailored blazer and matching trousers.",
+        price: 8999,
+        image: [p_img69],
+        category: "Men",
+        subCategory: "Formalwear",
+        sizes: ["38", "40", "42", "44", "46"],
+        date: 1716621345448,
+        bestseller: true
+    },
+    {
+        _id: "aaacr",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 460,
+        image: [p_img70],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaacs",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 460,
+        image: [p_img71],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaact",
+        name: "Men's Casual Pullover Hoodie",
+        description: "A comfortable and stylish pullover hoodie, made from soft cotton blend fabric, ideal for casual wear. Features a front kangaroo pocket, ribbed cuffs, and adjustable hood.",
+        price: 1199,
+        image: [p_img72],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL", "XXL"],
+        date: 1716621345448,
+        bestseller: false
+    },
+    {
+        _id: "aaacu",
+        name: "Men's Casual Pullover Hoodie",
+        description: "A comfortable and stylish pullover hoodie, made from soft cotton blend fabric, ideal for casual wear. Features a front kangaroo pocket, ribbed cuffs, and adjustable hood.",
+        price: 1499,
+        image: [p_img73],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL", "XXL"],
+        date: 1716621345448,
+        bestseller: false
+    },
+    {
+        _id: "aaacv",
+        name: "Men Slim Fit Relaxed Denim Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 770,
+        image: [p_img74],
+        category: "Men",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716664045448,
+        bestseller: false
+    },
+    {
+        _id: "aaacw",
+        name: "Men Slim Fit Relaxed Denim Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 740,
+        image: [p_img75],
+        category: "Men",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716664045448,
+        bestseller: false
+    },
+    {
+        _id: "aaacx",
+        name: "Men Slim Fit Relaxed Denim Jacket",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 900,
+        image: [p_img76],
+        category: "Men",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716664045448,
+        bestseller: false
+    },
+    {
+        _id: "aaacy",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 460,
+        image: [p_img77],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaacz",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 560,
+        image: [p_img78],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaada",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 430,
+        image: [p_img79],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaadb",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 570,
+        image: [p_img80],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaadc",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 500,
+        image: [p_img81],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaadd",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 480,
+        image: [p_img82],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaade",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 480,
+        image: [p_img83],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaadf",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 520,
+        image: [p_img84],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
+    {
+        _id: "aaadg",
+        name: "Boy Round Neck Pure Cotton T-shirt",
+        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        price: 540,
+        image: [p_img85],
+        category: "Kids",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716626645448,
+        bestseller: false
+    },
 ]
