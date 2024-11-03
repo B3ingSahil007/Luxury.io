@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { IoStar } from "react-icons/io5";
 import { IoIosStarOutline } from "react-icons/io";
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
     const { productId } = useParams();
-    const { products, currency } = useContext(ShopContext);
+    const { products, currency, addToCart } = useContext(ShopContext);
     const [productData, setProductData] = useState(null);
     const [image, setImage] = useState('');
     const [size, setSize] = useState('');
@@ -55,11 +56,7 @@ const Product = () => {
                                 <p>Select Size :</p>
                                 <div className='flex gap-2'>
                                     {productData.sizes.map((item, index) => (
-                                        <button
-                                            onClick={() => setSize(item)}
-                                            className={`border-1 border-gray-500 py-1 px-4 -mt-4 bg-gray-800 hover:bg-gray-500 hover:text-white ${item === size ? 'bg-gray-400 text-black' : ''}`}
-                                            key={index}
-                                        >
+                                        <button onClick={() => setSize(item)} className={`border-1 border-gray-500 py-1 px-4 -mt-4 bg-gray-800 hover:bg-gray-500 hover:text-white ${item === size ? 'bg-gray-400 text-black' : ''}`} key={index}>
                                             {item}
                                         </button>
                                     ))}
@@ -93,7 +90,7 @@ const Product = () => {
                             </div>
                         )}
                         <div>
-                            <button className='btn bg-black border-gray-500 border-1 text-white px-8 text-sm mr-2 py-2'>ADD TO CART</button>
+                            <button onClick={() => addToCart(productData._id, size)} className='btn bg-black border-gray-500 border-1 text-white px-8 text-sm mr-2 py-2'>ADD TO CART</button>
                             <hr className='mt-3 sm:w-4/5' />
                             <div className='text-sm text-gray-500 mt-3 flex flex-col gap-1'>
                                 <p>100% Original Product.</p>
@@ -114,6 +111,8 @@ const Product = () => {
                         <p>E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own dedicated page with relevant information.</p>
                     </div>
                 </div>
+                {/* Related Products */}
+                <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
             </div>
         </>
     ) : (

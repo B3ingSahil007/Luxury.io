@@ -10,7 +10,7 @@ import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const { showSearch, setShowSearch } = useContext(ShopContext)
+    const { showSearch, setShowSearch, getCartCount } = useContext(ShopContext)
     return (
         <>
             <div className="container sticky-top bg-[#242424] z-50">
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <IoMdSearch onClick={() => setShowSearch(!showSearch)} style={{ cursor: 'pointer', fontSize: '23px' }} />
                         <div className="group relative">
                             <FaUserAlt className='mt-0.5' style={{ cursor: 'pointer', fontSize: '17px' }} />
-                            <div className='group-hover:block bg-dark border-1 mt-2 border-white hidden absolute dropdown-menu right-0'>
+                            <div className='group-hover:block bg-dark border-1 mt-1 border-white hidden absolute dropdown-menu right-0'>
                                 <div className="flex flex-col mx-5 w-36 py-1 text-white rounded">
                                     <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Profile</li>
                                     <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Orders</li>
@@ -46,9 +46,15 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative">
-                            <IoMdCart style={{ cursor: 'pointer', fontSize: '22px' }} />
-                            <p className='absolute right-[-8px] bottom-[1px] border-white border w-5 text-center leading-4 bg-dark text-light rounded-full text-[8px]'>10</p>
+                        <div style={{ cursor: 'pointer', fontSize: '22px' }} className="relative">
+                            <NavLink to={'/cart'}>
+                                <IoMdCart />
+                                {getCartCount() > 0 && (
+                                    <p className='absolute right-[-8px] bottom-[1px] border-white border w-5 text-center leading-4 bg-dark text-light rounded-full text-[8px]'>
+                                        {getCartCount()}
+                                    </p>
+                                )}
+                            </NavLink>
                         </div>
                         <CgMenuRightAlt onClick={() => { setVisible(true) }} style={{ fontSize: '30px' }} className='w-6 cursor-pointer sm:hidden' />
                     </div>
