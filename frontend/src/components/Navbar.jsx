@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import '../assets/frontend_assets/assets'
 import { IoMdSearch } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <div className='flex gap-3'>
                         <IoMdSearch onClick={() => setShowSearch(!showSearch)} style={{ cursor: 'pointer', fontSize: '23px' }} />
                         <div className="group relative">
-                            <FaUserAlt className='mt-0.5' style={{ cursor: 'pointer', fontSize: '17px' }} />
+                            <Link to={'/login'}><FaUserAlt className='mt-0.5 cursor-pointer w-5' /></Link>
                             <div className='group-hover:block bg-dark border-1 mt-1 border-white hidden absolute dropdown-menu right-0'>
                                 <div className="flex flex-col mx-5 w-36 py-1 text-white rounded">
                                     <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Profile</li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ cursor: 'pointer', fontSize: '22px' }} className="relative">
+                        <div style={{ fontSize: '22px' }} className="relative cursor-pointer">
                             <NavLink to={'/cart'}>
                                 <IoMdCart />
                                 {getCartCount() > 0 && (

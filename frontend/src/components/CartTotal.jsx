@@ -48,19 +48,19 @@ const CartTotal = () => {
                     );
                 })}
                 <div className="flex justify-between">
-                    <p>Sub Total:</p>
+                    <p>Sub Total : </p>
                     <p>{currency} {subtotal.toFixed(2)}</p>
                 </div>
                 <div className="flex justify-between">
-                    <p>Discount ( 10% ):</p>
+                    <p>Discount ( 10% ) : </p>
                     <p>- {currency} {discount.toFixed(2)}</p>
                 </div>
                 <div className="flex justify-between">
-                    <p>Shipping Fee:</p>
+                    <p>Shipping Fee : </p>
                     <p>{currency} {delivery_fee}</p>
                 </div>
                 <div className="flex justify-between font-semibold mt-2">
-                    <p>Total:</p>
+                    <p>Total : </p>
                     <p>{currency} {totalWithShipping.toFixed(2)}</p>
                 </div>
             </div>
