@@ -71,8 +71,9 @@ const Cart = () => {
                 <div className='flex justify-end my-20'>
                     <div style={{ width: '20cm' }} className='sm:w-[450px] border p-3'>
                         <CartTotal />
-                        <div className='w-full text-end'>
-                            <button onClick={() => navigate("/placeorder")} className='mt-3 btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>PROCEED TO CHECKOUT</button>
+                        <div className='w-full text-center flex flex-col items-end'>
+                            {/* <button onClick={() => navigate("/placeorder")} className='mt-3 btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>PROCEED TO CHECKOUT</button> */}
+                            <button onClick={() => navigate("/placeorder")} className='btn bg-black border-gray-500 border-1 text-white px-8 text-sm mr-2 py-2 mt-3 sm:self-auto self-center'>PROCEED TO CHECKOUT</button>
                         </div>
                     </div>
                 </div>

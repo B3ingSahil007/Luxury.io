@@ -7,7 +7,7 @@ const Orders = () => {
     return (
         <>
             <div className='pt-4'>
-                <div>
+                <div className='text-xl lg:text-2xl'>
                     <Title text1={"MY"} text2={"ORDERS"} />
                 </div>
                 <div>

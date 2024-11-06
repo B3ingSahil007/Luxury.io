@@ -141,6 +141,16 @@ import star_icon from './star_icon.png'
 import support_img from './support_img.png'
 import menu_icon from './menu_icon.png'
 import about_img from './about_img.png'
+import about_img_1 from './about_img_1.jpg'
+import about_img_2 from './about_img_2.jpg'
+import about_img_3 from './about_img_3.jpg'
+import about_img_4 from './about_img_4.jpg'
+import about_img_5 from './about_img_5.jpg'
+import about_img_6 from './about_img_6.jpg'
+import about_img_7 from './about_img_7.jpg'
+import about_img_8 from './about_img_8.jpg'
+import about_img_9 from './about_img_9.jpg'
+import about_img_10 from './about_img_10.jpg'
 import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
@@ -162,6 +172,16 @@ export const assets = {
     support_img,
     menu_icon,
     about_img,
+    about_img_1,
+    about_img_2,
+    about_img_3,
+    about_img_4,
+    about_img_5,
+    about_img_6,
+    about_img_7,
+    about_img_8,
+    about_img_9,
+    about_img_10,
     contact_img,
     razorpay_logo,
     stripe_logo,

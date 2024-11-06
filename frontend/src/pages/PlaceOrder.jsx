@@ -107,10 +107,12 @@ const PlaceOrder = () => {
                             </div>
                             <div className="flex mt-4">
                                 <div className='w-full text-start'>
-                                    <button onClick={() => { navigate('/cart') }} className='btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>BACK</button>
+                                    {/* <button onClick={() => { navigate('/cart') }} className='btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>BACK</button> */}
+                                    <button onClick={() => { navigate('/cart') }} className='btn bg-black border-gray-500 border-1 text-white text-sm py-2 sm:self-auto self-center'>GO BACK</button>
                                 </div>
                                 <div className='w-full text-end'>
-                                    <button onClick={() => { navigate('/orders') }} className='btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>PLACE ORDER</button>
+                                    {/* <button onClick={() => { navigate('/orders') }} className='btn bg-black border-gray-500 border-1 text-white px-10 text-sm'>PLACE ORDER</button> */}
+                                    <button onClick={() => { navigate('/orders') }} className='btn bg-black border-gray-500 border-1 text-white text-sm py-2 sm:self-auto self-center'>PLACE ORDER</button>
                                 </div>
                             </div>
                         </div>

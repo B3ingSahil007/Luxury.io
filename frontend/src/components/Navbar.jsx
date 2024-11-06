@@ -41,7 +41,7 @@ const Navbar = () => {
                             <div className='group-hover:block bg-dark border-1 mt-1 border-white hidden absolute dropdown-menu right-0'>
                                 <div className="flex flex-col mx-5 w-36 py-1 text-white rounded">
                                     <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Profile</li>
-                                    <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Orders</li>
+                                    <Link to={'/orders'}><li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Orders</li></Link>
                                     <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>Log-Out</li>
                                 </div>
                             </div>

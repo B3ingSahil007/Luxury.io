@@ -90,7 +90,9 @@ const Product = () => {
                             </div>
                         )}
                         <div>
-                            <button onClick={() => addToCart(productData._id, size)} className='btn bg-black border-gray-500 border-1 text-white px-8 text-sm mr-2 py-2'>ADD TO CART</button>
+                            <div className='flex flex-col items-start'>
+                                <button onClick={() => addToCart(productData._id, size)} className='btn bg-black border-gray-500 border-1 text-white px-8 text-sm mr-2 py-2 sm:self-auto self-end'>ADD TO CART</button>
+                            </div>
                             <hr className='mt-3 sm:w-4/5' />
                             <div className='text-sm text-gray-500 mt-3 flex flex-col gap-1'>
                                 <p>100% Original Product.</p>
