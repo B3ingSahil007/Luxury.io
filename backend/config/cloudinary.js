@@ -9,7 +9,7 @@ const connectCloudinary = async () => {
         });
         console.log("Connection Successfully Established To Cloudinary");
     } catch (error) {
-        console.log("Cloudinary Connection Failed", error);
+        console.error("Cloudinary Connection Failed", error);
     }
 };
 

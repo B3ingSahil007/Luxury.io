@@ -33,7 +33,7 @@ const loginUser = async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(500).send({ success: false, message: "Internal Server Error !!" })
     }
 }
@@ -80,14 +80,36 @@ const registerUser = async (req, res) => {
         // console.log(req.body);
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(500).send({ success: false, message: "Internal Server Error !!" })
     }
 }
 
 // Route For Admin Login
 const adminLogin = async (req, res) => {
+<<<<<<< HEAD
 
+=======
+    try {
+        const { email, password } = req.body
+
+        if (!email || !password) {
+            return res.status(400).json({ success: false, message: "Email And Password Are Required." });
+        }
+
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email + password, process.env.JWT_SECRET_KEY)
+            res.json({ success: true, token })
+        } else {
+            console.error(error);
+            res.status(500).send({ success: false, message: "Invalid Credentials. You Are Not Authorized As Admin !!" })
+        }
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ success: false, message: "Internal Server Error !!" })
+    }
+>>>>>>> 91fd2bf (Ninth Commit)
 }
 
 module.exports = { loginUser, registerUser, adminLogin }
