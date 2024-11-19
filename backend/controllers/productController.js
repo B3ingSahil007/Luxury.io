@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const cloudinary = require("cloudinary").v2;
 const productModal = require("../models/productModal");
 
@@ -76,4 +74,3 @@ const removeProduct = async (req, res) => {
 }
 
 module.exports = { addProduct, singleProduct, listProduct, removeProduct }
->>>>>>> 91fd2bf (Ninth Commit)

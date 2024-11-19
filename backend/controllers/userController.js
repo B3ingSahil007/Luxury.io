@@ -87,9 +87,7 @@ const registerUser = async (req, res) => {
 
 // Route For Admin Login
 const adminLogin = async (req, res) => {
-<<<<<<< HEAD
 
-=======
     try {
         const { email, password } = req.body
 
@@ -101,15 +99,14 @@ const adminLogin = async (req, res) => {
             const token = jwt.sign(email + password, process.env.JWT_SECRET_KEY)
             res.json({ success: true, token })
         } else {
-            console.error(error);
+            // console.error(error);
             res.status(500).send({ success: false, message: "Invalid Credentials. You Are Not Authorized As Admin !!" })
         }
 
     } catch (error) {
-        console.error(error);
-        res.status(500).send({ success: false, message: "Internal Server Error !!" })
+        console.error(error);  // Log the error to the console
+        res.status(500).send({ success: false, message: "Internal Server Error !!" });
     }
->>>>>>> 91fd2bf (Ninth Commit)
 }
 
 module.exports = { loginUser, registerUser, adminLogin }
