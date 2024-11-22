@@ -11,7 +11,7 @@ const Welcome = () => {
                     Here you can add and manage users, products and orders for your platform.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div onClick={() => navigate('/')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
+                    <div onClick={() => navigate('/allusers')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
                         <div className="text-4xl text-yellow-400 mr-4">
                             <i className="fas fa-users"></i>
                         </div>
