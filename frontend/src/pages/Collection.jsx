@@ -93,7 +93,7 @@ const Collection = () => {
                     {/* Header Section with Title and Sort Option */}
                     <div className="flex justify-between items-center text-base sm:text-2xl mb-4">
                         <Title text1="All" text2="COLLECTIONS" />
-                        <select className="border border-gray-500 bg-transparent text-sm px-2" onChange={(e) => setSortOption(e.target.value)}>
+                        <select className="border rounded p-1 border-gray-500 bg-transparent text-sm px-2" onChange={(e) => setSortOption(e.target.value)}>
                             <option className="bg-[#242424]" value="relevant">Sort By: Relevant</option>
                             <option className="bg-[#242424]" value="lowtohigh">Sort By: Low To High</option>
                             <option className="bg-[#242424]" value="hightolow">Sort By: High To Low</option>

@@ -1,6 +1,6 @@
 const express = require('express')
 const { addProduct, singleProduct, listProduct, removeProduct } = require('../controllers/productController')
-const { upload } = require('../middleware/multer')
+const { upload } = require('../middleware/multer.js')
 const adminMiddleware = require('../middleware/adminMiddleware')
 
 const productRouter = express.Router()

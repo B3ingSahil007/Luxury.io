@@ -25,7 +25,7 @@ const Sidebar = () => {
                     </NavLink>
                     <NavLink to="/orders" className="flex items-center gap-3 border-1 border-gray-500 border-r-0 px-3 py-2 rounded-l">
                         <CiDeliveryTruck className='w-5 h-5' />
-                        <p className='hidden md:block'>All Orders</p>
+                        <p className='hidden md:block'>Manage Orders</p>
                     </NavLink>
                 </div>
             </div>

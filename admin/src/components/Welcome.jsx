@@ -5,13 +5,13 @@ const Welcome = () => {
     const navigate = useNavigate()
     return (
         <>
-            <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-6 rounded-lg shadow-lg">
+            <section className="bg-gradient-to-r from-gray-900 to-gray-700 text-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold mb-2">Welcome, Admin!</h2>
                 <p className="text-gray-300 mb-4">
                     Here you can add and manage users, products and orders for your platform.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div onClick={() => navigate('/allusers')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
+                    <div onClick={() => navigate('/allusers')} className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
                         <div className="text-4xl text-yellow-400 mr-4">
                             <i className="fas fa-users"></i>
                         </div>
@@ -20,7 +20,7 @@ const Welcome = () => {
                             <p className="text-sm text-gray-400">Add, edit, or remove users.</p>
                         </div>
                     </div>
-                    <div onClick={() => navigate('/add')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
+                    <div onClick={() => navigate('/add')} className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
                         <div className="text-4xl text-blue-400 mr-4">
                             <i className="fas fa-box-open"></i>
                         </div>
@@ -29,7 +29,7 @@ const Welcome = () => {
                             <p className="text-sm text-gray-400">Upload product details.</p>
                         </div>
                     </div>
-                    <div onClick={() => navigate('/list')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
+                    <div onClick={() => navigate('/list')} className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
                         <div className="text-4xl text-blue-400 mr-4">
                             <i className="fas fa-cogs"></i>
                         </div>
@@ -38,7 +38,7 @@ const Welcome = () => {
                             <p className="text-sm text-gray-400">View, update, or add new products.</p>
                         </div>
                     </div>
-                    <div onClick={() => navigate('/orders')} className="bg-gradient-to-r from-gray-700 to-gray-600 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
+                    <div onClick={() => navigate('/orders')} className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
                         <div className="text-4xl text-green-400 mr-4">
                             <i className="fas fa-shopping-cart"></i>
                         </div>

@@ -221,7 +221,7 @@ export const products = [
         image: [p_img3],
         category: "Kids",
         subCategory: "Topwear",
-        sizes: ["S", "L", "XL"],
+        sizes: ["S", "M", "L"],
         date: 1716234545448,
         bestseller: false
     },
@@ -233,7 +233,7 @@ export const products = [
         image: [p_img4],
         category: "Men",
         subCategory: "Topwear",
-        sizes: ["S", "M", "XXL"],
+        sizes: ["S", "M", "L", "XL"],
         date: 1716621345448,
         bestseller: false
     },

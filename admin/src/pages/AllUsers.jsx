@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserModal from "../components/UserModal";
+import { toast } from 'react-toastify'
 
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
@@ -24,7 +25,7 @@ const AllUsers = () => {
     };
 
     const handleDelete = async (id) => {
-        if (window.confirm("Are you sure you want to delete this user?")) {
+        if (window.confirm("Are You Sure You Want To Delete This User ?")) {
             // Delete user API call
             await fetch(`/api/users/${id}`, { method: "DELETE" });
             fetchUsers();
@@ -38,16 +39,16 @@ const AllUsers = () => {
 
     return (
         <div>
-            <h2 className="text-2xl mb-4">All Users</h2>
+            <h2 className="text-2xl mb-4">All Users :</h2>
             <div className="overflow-x-auto shadow-md border rounded-lg">
                 <table className="min-w-full table-auto border-collapse">
                     <thead className="bg-gray-700 text-white">
                         <tr>
-                            <th className="text-center px-4 py-2">Sr No</th>
-                            <th className="text-center px-4 py-2">First Name</th>
+                            <th className="text-center py-2">Sr No</th>
+                            <th className="text-center py-2">First Name</th>
                             <th className="text-center px-4 py-2">Last Name</th>
                             <th className="text-center px-4 py-2">Email</th>
-                            <th className="text-center px-4 py-2">Mobile Number</th>
+                            <th className="text-center py-2">Mobile Number</th>
                             <th className="text-center px-4 py-2">Apartment</th>
                             <th className="text-center px-4 py-2">Street</th>
                             <th className="text-center px-4 py-2">City</th>

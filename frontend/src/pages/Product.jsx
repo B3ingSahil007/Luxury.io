@@ -46,7 +46,14 @@ const Product = () => {
                             <IoStar className='w-3.5' />
                             <IoStar className='w-3.5' />
                             <IoIosStarOutline className='w-3.5' />
-                            <p className='pl-1'>( 122 )</p>
+                                <p className='pl-1'>( 122 )</p>
+                        </div>
+                        <div className='flex items-center gap-1 mt-1'>
+                            {productData.bestseller && (
+                                <p className='text-sm text-green-600 font-medium'>
+                                    Bestseller : This product is highly popular and trusted by customers.
+                                </p>
+                            )}
                         </div>
                         <p className='mt-3 text-3xl font-medium'>{currency}{productData.price}</p>
                         <p className='mt-3 text-gray-500 md:w-4/5'>{productData.description}</p>
