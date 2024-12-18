@@ -5,6 +5,8 @@ const connectDB = require('./config/mongodb.js');
 const connectCloudinary = require("./config/cloudinary.js");
 const userRouter = require("./routes/userRoutes.js");
 const productRouter = require('./routes/productRoute.js');
+const cartRouter = require('./routes/cartRoute.js');
+const orderRouter = require('./routes/orderRoute.js');
 
 // CORS
 const corsOptions = {
@@ -25,6 +27,8 @@ app.use(express.json())
 // API Endpoints
 app.use("/api/user", userRouter)
 app.use("/api/product", productRouter)
+app.use("/api/cart", cartRouter)
+app.use("/api/order", orderRouter)
 
 app.get('/', (req, res) => {
     res.send('API Working . . .')

@@ -27,7 +27,6 @@ const userSchema = new mongoose.Schema({
     },
     hashedPassword: {
         type: String,
-        required: true
     },
     apartment: {
         type: String,

@@ -19,6 +19,14 @@ const Add = ({ token }) => {
     const [bestseller, setBestseller] = useState(false)
     const [sizes, setSizes] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [specifications, setSpecifications] = useState({
+        processor: "",
+        ram: "",
+        storage: "",
+        display: "",
+        battery: "",
+        weight: "",
+    });
 
     const uploadAreas = Array.from({ length: 6 }, (_, i) => `image${i + 1}`);
 
@@ -33,6 +41,13 @@ const Add = ({ token }) => {
         }
     };
 
+    const handleSpecificationChange = (e, field) => {
+        setSpecifications((prev) => ({
+            ...prev,
+            [field]: e.target.value,
+        }));
+    };
+
     const onSubmithandle = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -45,6 +60,9 @@ const Add = ({ token }) => {
             formData.append("subCategory", subCategory)
             formData.append("sizes", JSON.stringify(sizes))
             formData.append("bestseller", bestseller)
+            if (category === "Electronics") {
+                formData.append("specifications", JSON.stringify(specifications));
+            }
 
             Object.keys(images).forEach((imageId) => {
                 const fileInput = document.getElementById(imageId);
@@ -65,6 +83,14 @@ const Add = ({ token }) => {
                 setSubCategory("Topwear");
                 setBestseller(false);
                 setSizes([]);
+                setSpecifications({
+                    processor: "",
+                    ram: "",
+                    storage: "",
+                    display: "",
+                    battery: "",
+                    weight: "",
+                });
                 setImages(
                     Object.fromEntries(
                         Array.from({ length: 6 }, (_, i) => [`image${i + 1}`, false])
@@ -140,25 +166,41 @@ const Add = ({ token }) => {
                         <option className="bg-gray-700" value="Formalwear">Formal Wear</option>
                     </select>
                 </div>
+                {/* Specifications Section */}
                 <div className="flex-1">
                     <p className="prata-regular mb-2 text-lg font-semibold">Product Price :</p>
                     <input onChange={(e) => setPrice(e.target.value)} value={price} className="w-full border border-gray-600 bg-transparent text-gray-200 px-4 py-2 rounded" type="number" placeholder="Eg - 1000" required />
                 </div>
             </div>
-            <div className="w-full">
-                <p className="prata-regular mb-2 text-lg font-semibold">Product Sizes :</p>
-                <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
-                    {["S", "M", "L", "XL", "XXL"].map((size) => (
-                        <button key={size} onClick={() => setSizes((prev) => prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size])} type="button" className={`prata-regular cursor-pointer border-2 px-2 py-2 rounded  ${sizes.includes(size) ? "border-gray-400 bg-slate-900 text-white" : "border-gray-600 bg-transparent text-gray-200"}  hover:border-gray-200`} >
-                            {size}
-                        </button>
-                    ))}
-                </div>
+            <div className="flex-1">
+                {category === "Electronics" && (
+                    <div className="w-full">
+                        <p className="prata-regular mb-2 text-lg font-semibold">Specifications :</p>
+                        <div className="grid grid-cols-3 gap-4">
+                            {Object.keys(specifications).map((field) => (
+                                <div key={field} className="flex flex-col">
+                                    <label className="mb-1 capitalize">{field} :</label>
+                                    <input type="text" value={specifications[field]} onChange={(e) => handleSpecificationChange(e, field)} className="border border-gray-600 bg-transparent text-gray-200 px-4 py-2 rounded" placeholder={`Enter ${field.charAt(0).toUpperCase() + field.slice(1)}`} required />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
+            {category !== "Electronics" && (
+                <div className="w-full">
+                    <p className="prata-regular mb-2 text-lg font-semibold">Product Sizes :</p>
+                    <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
+                        {["S", "M", "L", "XL", "XXL"].map((size) => (
+                            <button key={size} onClick={() => setSizes((prev) => prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size])} type="button" className={`prata-regular cursor-pointer border-2 px-2 py-2 rounded ${sizes.includes(size) ? "border-gray-400 bg-slate-900 text-white" : "border-gray-600 bg-transparent text-gray-200"} hover:border-gray-200`} >
+                                {size}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
             <div className="w-full flex items-center gap-4">
-                <label htmlFor="bestseller" className="prata-regular text-lg font-semibold">
-                    Best Seller :
-                </label>
+                <label htmlFor="bestseller" className="prata-regular text-lg font-semibold"> Best Seller : </label>
                 <input onChange={() => setBestseller(prev => !prev)} id="bestseller" checked={bestseller} className="w-5 h-5 accent-green-500 focus:outline-none" type="checkbox" />
             </div>
             <button type="submit" className={`btn btn-outline-dark ${loading ? "opacity-50 cursor-not-allowed" : ""} w-full sm:w-auto px-4 sm:px-6 py-2 text-sm sm:text-lg border text-white rounded shadow-xl hover:bg-gray-600 transition duration-300`} >

@@ -12,7 +12,7 @@ productRouter.route("/add").post(adminMiddleware, upload.fields([{ name: 'image1
 productRouter.route("/single").post(adminMiddleware, singleProduct)
 
 // Route For Listing All Products
-productRouter.route("/list").get(adminMiddleware, listProduct)
+productRouter.route("/list").get(listProduct)
 
 // Route For Removing Product (expects an ID parameter)
 productRouter.route("/remove").post(adminMiddleware, removeProduct)

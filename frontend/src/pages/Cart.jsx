@@ -12,21 +12,23 @@ const Cart = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const tempData = []
-        for (const items in cartItems) {
-            for (const item in cartItems[items]) {
-                if (cartItems[items][item] > 0) {
-                    tempData.push({
-                        _id: items,
-                        size: item,
-                        quantity: cartItems[items][item]
-                    })
+        if (products.length > 0) {
+            const tempData = []
+            for (const items in cartItems) {
+                for (const item in cartItems[items]) {
+                    if (cartItems[items][item] > 0) {
+                        tempData.push({
+                            _id: items,
+                            size: item,
+                            quantity: cartItems[items][item]
+                        })
+                    }
                 }
             }
+            // console.log(tempData);
+            setCartData(tempData)
         }
-        // console.log(tempData);
-        setCartData(tempData)
-    }, [cartItems])
+    }, [cartItems, products])
     return (
         <>
             <div className='pt-3'>
@@ -36,6 +38,7 @@ const Cart = () => {
                 <div>
                     {cartData.length > 0 ? (cartData.map((item, index) => {
                         const productData = products.find((product) => product._id === item._id)
+                        if (!productData) return null;
                         return (
                             <div key={index} className='py-3 text-gray-500 grid grid-cols=[3fr_1fr_1fr] sm:grid-cols-[3fr_2fr_1fr] items-center gap-4'>
                                 <div className='flex items-start gap-6'>

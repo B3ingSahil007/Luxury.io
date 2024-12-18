@@ -76,7 +76,7 @@ const registerUser = async (req, res) => {
         // Creating User Account & Generate JWT Token
         const userCreated = await userModal.create({ firstname, lastname, email, mobileNumber, password, confirmPassword, hashedPassword, apartment, street, city, state, zipCode, country })
         const token = createToken(userCreated._id)
-        res.status(201).json({ success: true, message: "User Created Successfully", userCreated, token })
+        res.status(201).json({ success: true, message: "User Created Successfully, Please Log-In", userCreated, token })
         // console.log(req.body);
 
     } catch (error) {

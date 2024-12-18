@@ -10,6 +10,24 @@ const PlaceOrder = () => {
     const [method, setMethod] = useState("cod");
     const [showOnlinePayments, setShowOnlinePayments] = useState(false);
     const [showCardPayments, setShowCardPayments] = useState(false);
+    const [formData, setFormData] = useState({
+        firstname: '',
+        lasrname: '',
+        email: '',
+        mobileNumber: '',
+        apartment: '',
+        street: '',
+        city: '',
+        state: '',
+        zipCode: '',
+        country: '',
+    });
+    const onChangehandle = (event) => {
+        const name = event.target.name
+        const value = event.target.value
+        setFormData(data => ({ ...data, [name]: value }))
+    }
+
     const navigate = useNavigate()
 
     const toggleOnlineCategory = () => {
@@ -22,27 +40,27 @@ const PlaceOrder = () => {
 
     return (
         <>
-            <div className='flex flex-col sm:flex-row justify-between gap-4 min-h-[80vh]'>
+            <form className='flex flex-col sm:flex-row justify-between gap-4 min-h-[80vh]'>
                 {/* Left Side */}
                 <div className='flex flex-col gap-4 w-full mt-3 sm:max-w-[480px]'>
                     <div className='text-xl sm:text-2xl'>
                         <Title text1={"DELIVERY"} text2={"INFORMATION"} />
                     </div>
                     <div className='flex gap-3 text-black'>
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='First-Name : John' />
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='Last-Name : Doe' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" required placeholder='First-Name : John' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" required placeholder='Last-Name : Doe' />
                     </div>
-                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="email" placeholder='E-Mail Address : john.doe@example.com' />
-                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="number" placeholder='Mobile Number : 1234567890' />
-                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Apartment, Suite, Unit, or Floor : Apt 4B or Floor 2' />
-                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Street : 123 Main St' />
+                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="email" required placeholder='E-Mail Address : john.doe@example.com' />
+                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="number" required placeholder='Mobile Number : 1234567890' />
+                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" required placeholder='Apartment, Suite, Unit, or Floor : Apt 4B or Floor 2' />
+                    <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" required placeholder='Street : 123 Main St' />
                     <div className='flex gap-3 text-black'>
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='City : San Francisco' />
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='State : California' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" required placeholder='City : San Francisco' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" required placeholder='State : California' />
                     </div>
                     <div className='flex gap-3 text-black'>
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="number" placeholder='Zip-Code : 94103' />
-                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='Country : United States' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="number" required placeholder='Zip-Code : 94103' />
+                        <input className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" required placeholder='Country : United States' />
                     </div>
                 </div>
                 {/* Right Side */}
@@ -118,7 +136,7 @@ const PlaceOrder = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </>
     );
 }

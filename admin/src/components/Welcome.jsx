@@ -30,7 +30,7 @@ const Welcome = () => {
                         </div>
                     </div>
                     <div onClick={() => navigate('/list')} className="bg-gradient-to-r from-gray-700 to-gray-900 p-4 rounded-lg flex items-center shadow-md hover:scale-110 transition-all ease-in-out cursor-pointer" >
-                        <div className="text-4xl text-blue-400 mr-4">
+                        <div className="text-4xl text-orange-400 mr-4">
                             <i className="fas fa-cogs"></i>
                         </div>
                         <div>

@@ -1,16 +1,27 @@
 import React, { useState, useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../assets/frontend_assets/assets'
 import { IoMdSearch } from "react-icons/io";
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaRegUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoArrowBackOutline } from "react-icons/io5";
+import { LuLogOut } from "react-icons/lu";
+import { CiViewList } from "react-icons/ci";
 import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const { showSearch, setShowSearch, getCartCount } = useContext(ShopContext)
+    const { showSearch, setShowSearch, getCartCount, token, setToken, setCartItems } = useContext(ShopContext)
+    const navigate = useNavigate()
+
+    const logout = () => {
+        navigate('/login')
+        localStorage.removeItem('token')
+        setToken('')
+        setCartItems({})
+    }
+
     return (
         <>
             <div className="container sticky-top bg-[#242424] z-50">
@@ -37,14 +48,18 @@ const Navbar = () => {
                     <div className='flex gap-3'>
                         <IoMdSearch onClick={() => setShowSearch(!showSearch)} style={{ cursor: 'pointer', fontSize: '23px' }} />
                         <div className="group relative">
-                            <Link to={'/login'}><FaUserAlt className='mt-0.5 cursor-pointer w-5' /></Link>
-                            <div className='group-hover:block bg-dark border-1 mt-1 border-white hidden absolute dropdown-menu right-0'>
-                                <div className="flex flex-col mx-5 w-36 py-1 text-white rounded">
-                                    <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Profile</li>
-                                    <Link to={'/orders'}><li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Orders</li></Link>
-                                    <li className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>Log-Out</li>
-                                </div>
-                            </div>
+                            {/* <Link to={'/login'}> */}
+                            <FaUserAlt onClick={() => token ? null : navigate('/login')} className='mt-0.5 cursor-pointer w-5' />
+                            {/* </Link> */}
+                            {/* Dropdown */}
+                            {token &&
+                                <div className='group-hover:block bg-dark border-1 mt-1 border-white hidden absolute dropdown-menu right-0'>
+                                    <div className="flex flex-col mx-5 w-36 py-1 text-white rounded">
+                                        <li onClick={()=>navigate('/myprofile')} className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Profile <FaRegUser className='mt-1 ml-2' /></li>
+                                        <li onClick={()=>navigate('/orders')} className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>My Orders <CiViewList className='mt-1 ml-2' /></li>
+                                        <li onClick={logout} className='hover:text-gray-500 justify-center flex py-2 cursor-pointer'>Log-Out <LuLogOut className='mt-1 ml-2' /></li>
+                                    </div>
+                                </div>}
                         </div>
                         <div style={{ fontSize: '22px' }} className="relative cursor-pointer">
                             <NavLink to={'/cart'}>
