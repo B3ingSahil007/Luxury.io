@@ -138,7 +138,7 @@ const ShopContextProvider = ({ children }) => {
         }
     }, [])
 
-    const value = { products, currency, delivery_fee, search, setSearch, showSearch, setShowSearch, addToCart, cartItems, getCartCount, updateQuantity, getCartAmount, backendUrl, token, setToken };
+    const value = { products, currency, delivery_fee, search, setSearch, showSearch, setShowSearch, addToCart, cartItems, setCartItems, getCartCount, updateQuantity, getCartAmount, backendUrl, token, setToken };
 
     return (
         <ShopContext.Provider value={value}>

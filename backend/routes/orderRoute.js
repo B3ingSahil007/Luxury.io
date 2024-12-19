@@ -21,6 +21,6 @@ orderRouter.post('/visa', authUser, placeOrderVisa)
 orderRouter.post('/discover', authUser, placeOrderDiscover)
 
 // User Features
-orderRouter.post('/userOrders', authUser, userOrders)
+orderRouter.post('/userorders', authUser, userOrders)
 
 module.exports = orderRouter;

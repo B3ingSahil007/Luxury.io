@@ -1,6 +1,6 @@
-const { default: orderModal } = require("../models/orderModal");
-
-orderModal
+const { response } = require('express');
+const orderModal = require('../models/orderModal');
+const userModal = require('../models/userModal');
 
 // Placing Orders Using COD Method
 const placeOrder = async (req, res) => {
@@ -10,7 +10,7 @@ const placeOrder = async (req, res) => {
         const newOrder = new orderModal(orderData)
         await newOrder.save()
 
-        await userModal.findIdAndUpdate(userId, { cartData: {} })
+        await userModal.findByIdAndUpdate(userId, { cartData: {} })
         res.json({ success: true, message: 'Order Placed Successfully' })
 
     } catch (error) {
@@ -61,12 +61,27 @@ const placeOrderDiscover = async (req, res) => {
 
 // All Orders For Admin Panel
 const allOrders = async (req, res) => {
+    try {
+        const orders = await orderModal.find({})
+        res.json({ success: true, orders })
 
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message })
+    }
 }
 
 // User Orders Data For Frontend
 const userOrders = async (req, res) => {
+    try {
+        const { userId } = req.body;
+        const orders = await orderModal.find({ userId })
+        res.json({ success: true, orders })
 
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message })
+    }
 }
 
 // Update Orders Status Form Admin Panel
