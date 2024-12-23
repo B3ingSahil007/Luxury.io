@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserModal from "../components/UserModal";
-import { backendURL } from '../App';\
+import { backendURL } from '../App';
 
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
