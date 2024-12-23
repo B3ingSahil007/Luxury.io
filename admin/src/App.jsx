@@ -12,6 +12,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AllUsers from "./pages/AllUsers";
 
+// CORS
+const corsOptions = {
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://luxury-io-frontend.vercel.app'], // Allow both 5173 and 5174
+    methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, PROPFIND',
+    credentials: true
+}
+
 export const backendURL = import.meta.env.VITE_BACKEND_URL
 export const currency = '₹'
 
