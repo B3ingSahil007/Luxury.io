@@ -5,7 +5,7 @@ const authUser = require('../middleware/auth.js')
 
 const orderRouter = express.Router();
 
-// Admin Fratures
+// Admin Features
 orderRouter.post('/list', adminMiddleware, allOrders)
 orderRouter.post('/status', adminMiddleware, updateOrderStatus)
 

@@ -27,6 +27,24 @@ const Orders = ({ token }) => {
     }
   };
 
+  const updateOrderStatus = async (orderId, status) => {
+    try {
+      const response = await axios.post(
+        `${backendURL}/api/order/status`,
+        { orderId, status },
+        { headers: { token } }
+      );
+      if (response.data.success) {
+        toast.success(response.data.message);
+        fetchAllOrders(); // Refresh the orders list
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Error updating status');
+    }
+  };
+
   useEffect(() => {
     fetchAllOrders();
   }, [token]);
@@ -86,7 +104,7 @@ const Orders = ({ token }) => {
               <p>
                 <strong>Date :</strong> {new Date(order.date).toLocaleString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', })}
               </p>
-              <select>
+              <select value={order.status} onChange={(e) => updateOrderStatus(order._id, e.target.value)}>
                 <option value="Order Placed">Order Placed</option>
                 <option value="Packing">Packing</option>
                 <option value="Shipped">Shipped</option>
