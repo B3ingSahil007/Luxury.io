@@ -14,10 +14,7 @@ const AllUsers = () => {
 
     const fetchUsers = async () => {
         // Mock fetch logic, replace with actual API call
-<<<<<<< HEAD
         // const response = await fetch("http://localhost:4000/api/user/allusers");
-=======
->>>>>>> ec18dc40e2d79a5ee4d6a691db741cfcb617eb1b
         const response = await fetch(backendURL + '/api/user/allusers');
         const data = await response.json();
         setUsers(data);
