@@ -10,7 +10,7 @@ const orderRouter = require('./routes/orderRoute.js');
 
 // CORS
 const corsOptions = {
-    origin: ['http://localhost:5173', 'http://localhost:5174'], // Allow both 5173 and 5174
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://luxury-io-frontend.vercel.app'], // Allow both 5173 and 5174
     methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, PROPFIND',
     credentials: true
 }
