@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserModal from "../components/UserModal";
-import { toast } from 'react-toastify'
+import { backendURL } from '../App';\
 
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
@@ -14,7 +14,7 @@ const AllUsers = () => {
 
     const fetchUsers = async () => {
         // Mock fetch logic, replace with actual API call
-        const response = await fetch("http://localhost:4000/api/user/allusers");
+        const response = await fetch(backendURL + '/api/user/allusers');
         const data = await response.json();
         setUsers(data);
     };
