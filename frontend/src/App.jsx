@@ -31,99 +31,22 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <ToastContainer
-          position="bottom-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition="Slide"
-          bodyClassName="toastBody"
-        />
+        <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" transition="Slide" bodyClassName="toastBody" />
         <Navbar />
         <SearchBar />
         <Routes>
           {/* Public Route */}
           <Route path="/login" element={<Login />} />
-
           {/* Protected Routes */}
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/collection"
-            element={
-              <ProtectedRoute>
-                <Collection />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <ProtectedRoute>
-                <About />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <ProtectedRoute>
-                <Contact />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/product/:productId"
-            element={
-              <ProtectedRoute>
-                <Product />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <ProtectedRoute>
-                <Cart />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/myprofile"
-            element={
-              <ProtectedRoute>
-                <MyProfile />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/placeorder"
-            element={
-              <ProtectedRoute>
-                <PlaceOrder />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/orders"
-            element={
-              <ProtectedRoute>
-                <Orders />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/collection" element={<ProtectedRoute> <Collection /> </ProtectedRoute>} />
+          <Route path="/about" element={<ProtectedRoute> <About /> </ProtectedRoute>} />
+          <Route path="/contact" element={<ProtectedRoute> <Contact /> </ProtectedRoute>} />
+          <Route path="/product/:productId" element={<ProtectedRoute> <Product /> </ProtectedRoute>} />
+          <Route path="/cart" element={<ProtectedRoute> <Cart /> </ProtectedRoute>} />
+          <Route path="/myprofile" element={<ProtectedRoute> <MyProfile /> </ProtectedRoute>} />
+          <Route path="/placeorder" element={<ProtectedRoute> <PlaceOrder /> </ProtectedRoute>} />
+          <Route path="/orders" element={<ProtectedRoute> <Orders /> </ProtectedRoute>} />
         </Routes>
         <Footer />
       </div>

@@ -92,19 +92,34 @@ const List = ({ token }) => {
           ))}
         </div>
         {/* Pagination */}
-        <div className="flex justify-center items-center gap-4 mt-4">
-          <button disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)} className="px-3 py-1 bg-gray-700 hover:bg-gray-800 text-white rounded disabled:opacity-50" >
+        <div className="flex justify-center items-center gap-2 flex-wrap">
+          <button
+            disabled={currentPage === 1}
+            onClick={() => handlePageChange(currentPage - 1)}
+            className="px-3 py-1 bg-gray-700 hover:bg-gray-800 text-white rounded disabled:opacity-50"
+          >
             Prev
           </button>
+
           {[...Array(totalPages)].map((_, i) => (
-            <button key={i} onClick={() => handlePageChange(i + 1)} className={`px-3 py-1 ${currentPage === i + 1 ? "bg-purple-700" : "bg-gray-700"} hover:bg-gray-800 text-white rounded`} >
+            <button
+              key={i}
+              onClick={() => handlePageChange(i + 1)}
+              className={`px-3 py-1 ${currentPage === i + 1 ? "bg-purple-700" : "bg-gray-700"} hover:bg-gray-800 text-white rounded`}
+            >
               {i + 1}
             </button>
           ))}
-          <button disabled={currentPage === totalPages} onClick={() => handlePageChange(currentPage + 1)} className="px-3 py-1 bg-gray-700 hover:bg-gray-800 text-white rounded disabled:opacity-50" >
+
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => handlePageChange(currentPage + 1)}
+            className="px-3 py-1 bg-gray-700 hover:bg-gray-800 text-white rounded disabled:opacity-50"
+          >
             Next
           </button>
         </div>
+
       </div>
     </>
   );
