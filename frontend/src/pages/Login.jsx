@@ -94,15 +94,15 @@ const Login = () => {
                         </div>
                         {/* Right Column: Address Information */}
                         <div className='flex flex-col gap-4'>
-                            <input onChange={(e) => setApartment(e.target.value)} value={apartment} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Apartment, Suite, Unit, or Floor : Apt 4B or Floor 2' required />
-                            <input onChange={(e) => setStreet(e.target.value)} value={street} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Street : 123 Main St' required />
+                            <input onChange={(e) => setApartment(e.target.value)} value={apartment} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Apartment, Suite, Unit, or Floor : Apt 4B or Floor 2' />
+                            <input onChange={(e) => setStreet(e.target.value)} value={street} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3 text-black' type="text" placeholder='Street : 123 Main St' />
                             <div className='flex flex-col sm:flex-row gap-4'>
-                                <input onChange={(e) => setCity(e.target.value)} value={city} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='City : San Francisco' required />
-                                <input onChange={(e) => setState(e.target.value)} value={state} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='State : California' required />
+                                <input onChange={(e) => setCity(e.target.value)} value={city} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='City : San Francisco' />
+                                <input onChange={(e) => setState(e.target.value)} value={state} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='State : California' />
                             </div>
                             <div className='flex flex-col sm:flex-row gap-4'>
-                                <input onChange={(e) => setCountry(e.target.value)} value={country} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="number" placeholder='Zip-Code : 94103' required />
-                                <input onChange={(e) => setZipCode(e.target.value)} value={zipCode} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='Country : United States' required />
+                                <input onChange={(e) => setCountry(e.target.value)} value={country} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="number" placeholder='Zip-Code : 94103' />
+                                <input onChange={(e) => setZipCode(e.target.value)} value={zipCode} className='border border-gray-500 bg-gray-600 rounded py-1.5 w-full px-3' type="text" placeholder='Country : United States' />
                             </div>
                         </div>
                     </div>

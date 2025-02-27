@@ -9,6 +9,7 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { LuLogOut } from "react-icons/lu";
 import { CiViewList } from "react-icons/ci";
 import { ShopContext } from '../context/ShopContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -19,6 +20,7 @@ const Navbar = () => {
         navigate('/login')
         localStorage.removeItem('token')
         setToken('')
+        toast.success("User Logged Out!!")
         setCartItems({})
     }
 

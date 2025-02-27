@@ -1,0 +1,191 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Luxury.io",
+    "collectionId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+    "dateExported": "2025-02-06T08:48:16.239Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "023e1974-7ed6-4b65-b064-e343810d138f",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "User Registeration",
+            "url": "http://localhost:4000/api/user/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-06T13:15:12.059Z",
+            "modified": "2024-12-14T09:03:57.599Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"firstname\": \"Rizwana\",\n    \"lastname\": \"Menpurwala\",\n    \"email\": \"rizwanamenpurwala2192@gmail.com\",\n    \"mobileNumber\": \"9624701963\",\n    \"password\": \"1234567890\",\n    \"apartment\": \"758\",\n    \"street\": \"Ravadiavas, Panch Pipli, Jamalpur\",\n    \"city\": \"Ahmedabad\",\n    \"state\": \"Gujarat\",\n    \"zipCode\": \"380001\",\n    \"country\": \"India\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "a3e807d4-27bb-42a6-a0a6-a7ce91ec30ec",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "User Login",
+            "url": "http://localhost:4000/api/user/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-11-06T14:24:20.676Z",
+            "modified": "2024-11-06T14:35:49.425Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"chhipasahil163@gmail.com\",\n  \"password\": \"SahilRizzu218925\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c9b816af-7ea4-4410-9113-3b696df91e71",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "Add Product",
+            "url": "http://localhost:4000/api/product/add",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-11-07T06:28:03.639Z",
+            "modified": "2024-12-10T12:29:17.887Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Y2hoaXBhc2FoaWwxNjNAZ21haWwuY29tU2FoaWxSaXp6dTIxODkyNQ.LgCSlfCNFvlG_ER0YlNsZTsPxpR6Nm74g9GWVRFd2Fw"
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Highlander Hoodie"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Product Description"
+                    },
+                    {
+                        "name": "price",
+                        "value": "800"
+                    },
+                    {
+                        "name": "category",
+                        "value": "Men"
+                    },
+                    {
+                        "name": "subCategory",
+                        "value": "Topwear"
+                    },
+                    {
+                        "name": "sizes",
+                        "value": "[\"S\",\"M\", \"L\",\"XL\"]"
+                    },
+                    {
+                        "name": "bestseller",
+                        "value": "true"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "d397531d-8352-463b-8637-adef00dc93d5",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "All Products",
+            "url": "http://localhost:4000/api/product/list",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-11-11T08:48:03.173Z",
+            "modified": "2024-12-13T13:05:55.028Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Y2hoaXBhc2FoaWwxNjNAZ21haWwuY29tU2FoaWxSaXp6dTIxODkyNQ.LgCSlfCNFvlG_ER0YlNsZTsPxpR6Nm74g9GWVRFd2Fw"
+                }
+            ]
+        },
+        {
+            "_id": "a8de08f5-3a05-4293-9bd8-59915caae326",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "Delete Product",
+            "url": "http://localhost:4000/api/product/remove",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-11-11T08:53:37.982Z",
+            "modified": "2024-11-13T12:43:10.173Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Y2hoaXBhc2FoaWwxNjNAZ21haWwuY29tU2FoaWxSaXp6dTIxODkyNQ.LgCSlfCNFvlG_ER0YlNsZTsPxpR6Nm74g9GWVRFd2Fw"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\"id\":\"6731c72b8212a54a23a4e177\"}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f9c2a1c3-6dd3-4c3d-8bca-367e1c9fdaeb",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "Single Product",
+            "url": "http://localhost:4000/api/product/single",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-11-11T09:04:03.920Z",
+            "modified": "2024-11-13T12:43:34.624Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Y2hoaXBhc2FoaWwxNjNAZ21haWwuY29tU2FoaWxSaXp6dTIxODkyNQ.LgCSlfCNFvlG_ER0YlNsZTsPxpR6Nm74g9GWVRFd2Fw"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productId\": \"6731c8ca2208915beda29670\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9e531984-3cc3-4552-a7da-d54d4738d129",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "Admin Login",
+            "url": "http://localhost:4000/api/user/admin",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-11-11T13:53:07.671Z",
+            "modified": "2024-11-19T13:17:00.614Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"chhipasahil163@gmail.com\",\n  \"password\": \"SahilRizzu218925\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "ea2f3ae4-6ca8-431b-bfdb-1e8dfa8140b4",
+            "colId": "de1d2a4d-597c-422c-b8d3-9c9de41aea57",
+            "containerId": "",
+            "name": "All Users",
+            "url": "http://localhost:4000/api/user/allusers",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-11-20T08:17:24.544Z",
+            "modified": "2024-11-20T08:30:45.756Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Y2hoaXBhc2FoaWwxNjNAZ21haWwuY29tU2FoaWxSaXp6dTIxODkyNQ.LgCSlfCNFvlG_ER0YlNsZTsPxpR6Nm74g9GWVRFd2Fw"
+                }
+            ]
+        }
+    ],
+    "ref": "JTFEhl_gS7b7c2d8tk4ACVSXBqnmWfastzA94mYTk9RDxeZnFdvXWMIPNj7YNam4tQGy0BcWKRTNRqNcOGE4lw"
+}
